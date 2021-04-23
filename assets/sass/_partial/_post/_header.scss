@@ -1,3 +1,4 @@
+
 .post-header {
   margin-bottom: 20px;
 
@@ -6,10 +7,17 @@
     font-size: $post-title-font-size;
     font-weight: $post-title-font-weight;
     font-family: $global-serif-font-family;
+    color:$title !important;
   }
-
+  h1,h2,h3,h4,h5,h6{
+    color:$title !important;
+    a {
+      color:$title !important;
+    }
+  }
   .post-link {
     @include underline-from-center;
+    color:$title !important;
   }
 
   .post-meta {
@@ -43,4 +51,5 @@
     }
 
   }
+  
 }

@@ -1,10 +1,21 @@
 <div class="logo-wrapper">
   <a href="{{ "/" | relLangURL }}" class="logo">
-    {{- if .Site.Params.logoTitle -}}
+    <!-- {{- if .Site.Params.logoTitle -}}
       {{ .Site.Params.logoTitle }}
     {{- else -}}
       {{ .Site.Title }}
-    {{- end -}}
+    {{- end -}} -->
+    
+      <!-- // 添加过渡 -->
+      <!-- transition: transform 0.5s; -->
+       <!-- overflow: hidden; -->
+    <div>
+      <img style="float:left;width:80px;height:80px" class= "logo_image" src="/logo.svg"/>
+      <p style="margin:0;float:left">
+        东泽煮粥
+      </p>
+    </div>   
+    
   </a>
 </div>
 

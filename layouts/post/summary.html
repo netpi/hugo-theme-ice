@@ -1,6 +1,16 @@
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+    <h1 class="post-title">
+      
+      
+      <a class="post-link" href="{{ .RelPermalink }}">
+        {{ if eq .Params.top true }}
+          <text class="top">[置顶] </text>
+        {{ end }}
+        {{ .Title }}
+      </a>
+    
+    </h1>
     <div class="post-meta">
       <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
       {{ with .Params.categories -}}
@@ -19,6 +29,16 @@
   <!-- Content -->
   <div class="post-content">
     <div class="post-summary">
+    
+      <a href="{{ .RelPermalink }}" class="image featured">{{if isset .Params "cover_p" }} 
+        <div style="width: 100%; padding-bottom: 42.55%; background-size:100% 100%; background-image: url({{ index .Params "cover_p" }});">
+
+        </div>
+         <!-- <img style="max-width: 750px;" src="{{ index .Params "cover_p" }}">  -->
+         
+         <br>{{ end }}
+      </a> 
+      
       {{ .Summary }}
     </div>
     <div class="read-more">

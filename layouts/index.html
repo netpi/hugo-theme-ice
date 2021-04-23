@@ -1,9 +1,23 @@
 {{- define "content" -}}
   <section id="posts" class="posts">
-    {{/* (index .Site.Paginate) */}}
+    
+    <!-- range .Site.RegularPages -->
+    
+
     {{- $paginator := .Paginate (where (where .Site.RegularPages "Type" "post") ".Params.hiddenfromhomepage" "!=" true) }}
+
+    <!-- 置顶 -->
+    {{range .Site.RegularPages}}
+      {{ if and (eq .Params.top true) (eq $paginator.PageNumber 1) }}
+        {{ .Render "summary" }}
+      {{ end }}
+    {{ end -}}
+    <!-- post -->
     {{- range $paginator.Pages -}}
-      {{ .Render "summary" }}
+      {{ if ne .Params.top true }}
+        {{ .Render "summary" }}
+      {{ end }}
+      
     {{ end -}}
   </section>
   <!-- pagination -->

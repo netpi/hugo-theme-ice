@@ -13,14 +13,14 @@
 </div>
 
 <div class="copyright">
-  <span class="power-by">
+  <!-- <span class="power-by">
     {{ (printf (T "powered") `<a class="hexo-link" href="https://gohugo.io">Hugo</a>`) | safeHTML }}
   </span>
   <span class="division">|</span>
   <span class="theme-info">
     {{ T "theme" }} - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
+  </span> -->
 
   {{ if .Site.Params.busuanzi.enable -}}
   <div class="busuanzi-footer">
@@ -45,8 +45,10 @@
     {{ end }}
     {{- $current }}
     <span class="heart">
-      <i class="iconfont icon-heart"></i>
+      <!-- <i class="iconfont icon-heart"></i> -->
+      <img width="20" src="/logo.svg"/>
+      
     </span>
-    <span class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+    <!-- <span class="author">{{if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}东泽煮粥{{ end }}</span>   -->
   </span>
 </div>
