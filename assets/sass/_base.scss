@@ -99,3 +99,12 @@ a {
 .top {
   color: $quote_line
 }
+
+h1,h2,h3,h3,h5 {
+  color: $title
+}
+
+::marker {
+  color: $quote_line;
+
+}

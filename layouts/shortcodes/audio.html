@@ -1,0 +1,55 @@
+{{/*
+  ## aplayer
+
+  ### Params:
+
+  - `id`
+
+    required param
+    you can extract from music url
+    url format "http://music.163.com/#/song?id=3950552"
+
+  - Fiddle `auto`
+
+    optional param
+    default value 0
+    you can overwrite it with 1
+
+  ### Examples:
+
+  - Simple
+
+    {{% music "3950552" %}}
+    {{% music "3950552" "1" %}}
+
+  - Named Params
+
+    {{% music id="3950552" %}}
+    {{% music id="3950552" auto="1" %}}
+
+*/}}
+
+{{- /* DEFAULTS */ -}}
+{{ $auto := "0" }}
+<div style="max-width: 400px;">
+<div>  
+  <meting-js  
+    url="{{.Get "url"}}"
+    name="{{.Get "name"}}"
+    artist="{{.Get "artist"}}"
+    theme="#4C6A9E"
+    mini="{{.Get "mini"}}"
+    cover="https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/hskah.jpg">
+  </meting-js>
+</div>  
+
+</div>
+
+<!-- class="aplayer"
+data-type="song"
+data-mutex="true"
+data-mini="true"
+data-loop="none"
+theme="#4C6A9E"
+data-theme="#D37E7E"
+-->

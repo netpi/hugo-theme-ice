@@ -7,13 +7,13 @@
 
   .iconfont {
     font-size: $social-icon-font-size;
-
+    color: $title;
     & + .iconfont {
       margin-left: $social-link-margin-left;
     } 
 
     &:hover {
-      color: $theme-color;
+      color: $quote_line;
     }
   }
 }
