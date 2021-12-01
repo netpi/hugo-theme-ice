@@ -3,7 +3,6 @@
     
     <!-- range .Site.RegularPages -->
     
-
     {{- $paginator := .Paginate (where (where .Site.RegularPages "Type" "post") ".Params.hiddenfromhomepage" "!=" true) }}
 
     <!-- 置顶 -->

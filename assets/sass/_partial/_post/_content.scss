@@ -73,22 +73,22 @@
     max-width: 100%;
   }
 
+  
   .table-wrapper {
     overflow-x: auto;
-
     > table {
       max-width: 100%;
       margin: 10px 0;
       border-spacing: 0;
-      box-shadow: 2px 2px 3px rgba(0,0,0,.125);
-
+      // box-shadow: 2px 2px 3px rgba(0,0,0,.125);
+      // border: 1px dotted $title;
       thead {
-        background: $deputy-color;
+        background: none;
       }
 
       th, td {
         padding: 5px 15px;
-        border: 1px double $content-table-border-color;
+        border: 1px dotted $title;
       }
 
       tr:hover {

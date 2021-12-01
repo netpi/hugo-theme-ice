@@ -31,6 +31,9 @@
 
 {{- /* DEFAULTS */ -}}
 {{ $auto := "0" }}
+{{ $defaultCover := "https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/hskah.jpg" }}
+
+
 <div style="max-width: 400px;">
 <div>  
   <meting-js  
@@ -39,10 +42,9 @@
     artist="{{.Get "artist"}}"
     theme="#4C6A9E"
     mini="{{.Get "mini"}}"
-    cover="https://chendongze.oss-cn-shanghai.aliyuncs.com/ipic/hskah.jpg">
+    cover="{{if .Get "cover" }} {{.Get "cover"}} {{else}} {{$defaultCover}} {{end}}" >
   </meting-js>
 </div>  
-
 </div>
 
 <!-- class="aplayer"

@@ -1,0 +1,80 @@
+<style>
+  /* Custom player style */
+
+  .section_midiplayer {
+    border-left: 3px solid #475269;
+    width:100%;
+    margin:0 1px 0 0;
+  }
+  .section_midiplayer midi-player {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    margin: 0 0 0 2px;
+    padding-left: 10px;
+    max-width: 500px;
+    
+  }
+  /* 
+  .section_midiplayer midi-player::part(control-panel) {
+    background: #ff5;
+    border: 2px solid #4C6A9E;
+    border-radius: 0px 0px 0 0;
+    background-color: #fff;
+  }
+  .section_midiplayer midi-player::part(play-button) {
+    color: #D37E7E;
+    border: 3px solid #D37E7E;
+    background-color: #4C6A9E;
+    border-radius: 20px;
+    transition: all 0.2s;
+    content: 'hello';
+  } */
+  /* .section_midiplayer midi-player::part(play-button):hover {
+    color: #0a0;
+    background-color: #5f5;
+    border-radius: 20px;
+  } */
+  .section_midiplayer midi-player::part(time) {
+    font-family: monospace;
+  }
+
+
+  /* Custom visualizer style */
+  .section_midiplayer midi-visualizer .piano-roll-visualizer {
+    width: 100%;
+    background: #fff;
+  /*   border-bottom: 2px solid black; */
+    border-top: none;
+    border-radius: 0 0 0px 0px;
+    margin: 0px;
+    margin-top: 0;
+    overflow: auto;
+  }
+
+  .section_midiplayer midi-visualizer svg rect.note {
+  /*   opacity: 0.6; */
+  /*   stroke-width: 2; */
+    
+  }
+  .section_midiplayer midi-visualizer svg rect.note[data-instrument="0"]{
+    fill: #475269;
+    stroke: #4C6A9E;
+  }
+  /* .section_midiplayer midi-visualizer svg rect.note[data-instrument="2"]{
+    fill: #2ee;
+    stroke: #055;
+  }
+  .section_midiplayer midi-visualizer svg rect.note[data-is-drum="true"]{
+    fill: #888;
+    stroke: #888;
+  } */
+  .section_midiplayer midi-visualizer svg rect.note.active {
+  /*   opacity: 0.9; */
+    fill: #D37E7E;
+    stroke: #934643;
+  
+  }
+</style>  
+
+<script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
