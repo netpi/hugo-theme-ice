@@ -1,9 +1,13 @@
 <section id="m{{.Get "title"}}" class="section_midiplayer">
   <!-- <h2> {{.Get "title"}}</h2> -->
   <midi-player
+    class="midi-player"
     src="{{.Get "src"}}"
     sound-font visualizer="#m{{.Get "title"}} midi-visualizer">
   </midi-player>
+  <p class = "title" >
+    <!-- {{.Get "title"}} -->
+  </p>
   <midi-visualizer
     src="{{.Get "src"}}">
   </midi-visualizer>

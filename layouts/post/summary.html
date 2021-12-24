@@ -38,8 +38,9 @@
          
          <br>{{ end }}
       </a> 
-      
-      {{ .Summary }}
+      <!-- {{ if ne .Params.summary false }} -->
+        {{ .Summary }}
+      <!-- {{ end }} -->
     </div>
     <div class="read-more">
       <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }}</a>
